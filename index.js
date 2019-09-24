@@ -39,7 +39,7 @@ axios.get('http://api.worldbank.org/countries/USA/indicators/NY.GDP.MKTP.CD?per_
         if (!data.length) throw Error("no data found!")
     })
     .then(_ => {
-        app.listen(3001)
-        console.log("listening on 3001")
+        app.listen(process.env.PORT || 3001)
+        console.log("listening on", process.env.PORT)
     })
     .catch(e => console.error(e));
