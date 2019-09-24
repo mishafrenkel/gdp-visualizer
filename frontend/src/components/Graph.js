@@ -46,7 +46,7 @@ class Graph extends Component {
             start: this.state.startValue,
             windowSize: this.state.windowSizeValue
         }
-        axios.get(`http://localhost:3001/api/graph`, { params: data })
+        axios.get(`/api/graph`, { params: data })
             .then(res => {
                 for (let i = 0; i < res.data.length; i++) {
                     this.setState({
